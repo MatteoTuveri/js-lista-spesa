@@ -4,11 +4,16 @@ while (item !== 'stop'){
 
     item = prompt('Inserire un altro articolo o scrivere "stop" se si vuole concludere la lista');
 
-    if(isNaN(parseInt(item) && item !='stop')){
+    console.log(item);
+
+    if(item !=='stop' && isNaN(parseInt(item))){
         itemList.push(item);
     }
+    else if(item ==='stop'){
+        alert('lista terminata');
+    }
     else{
-        alert('inserire solo lettere')
+        alert('inserire solo lettere');
     }
     
 }
