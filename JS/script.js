@@ -1,8 +1,10 @@
 const itemList=[];
 let item;
-while (item !== 'stop' && item !== 'Stop'){
+while (item !== 'stop'){
+
     item = prompt('Inserire un altro articolo o scrivere "stop" se si vuole concludere la lista');
-    if(isNaN(parseInt(item))){
+
+    if(isNaN(parseInt(item) && item !='stop')){
         itemList.push(item);
     }
     else{
@@ -10,4 +12,9 @@ while (item !== 'stop' && item !== 'Stop'){
     }
     
 }
+let stamp = document.getElementById('stamp');
+for(let j=0;j<itemList.length;j++){
+    stamp.innerHTML+=itemList[j]+' ';
+}
+
 console.log(itemList);
